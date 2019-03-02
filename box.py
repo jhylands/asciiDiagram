@@ -1,3 +1,6 @@
+import Element
+
+
 def box(width, height):
     buffer = []
     buffer.append("." + "-"*(width-2) + ".")
@@ -5,11 +8,10 @@ def box(width, height):
     buffer.append("'" + "-"*(width-2) + "'")
     return "\n".join(buffer)
 
-import Element
+
 class Box(Element):
 
-    def __init__(self, width, height):
+    def __init__(self, x, y, width, height):
+        super(Box).__init__(x, y)
         self.width = width
         self.height = height
-    
-

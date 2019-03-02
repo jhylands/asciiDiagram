@@ -1,13 +1,19 @@
+from error import UnimplementedError
+from box import Box
+
+
 def textbox(text):
-    top = "." + "-"*(len(text)) +"."
+    top = "." + "-"*(len(text)) + "."
     middle = "|" + text + "|"
     bottom = "'" + "-"*len(text)
     return "\n".join([top, middle, bottom])
 
-import Element
-class textbox(Element):
-    def __init__(self):
-        pass
+
+class Textbox(Box):
+    def __init__(self, text, x, y):
+        width = len(text) + 2
+        height = 3
+        super(Textbox).__init__(x, y, width, height)
 
     def set_text(self, text):
         self.text = text
