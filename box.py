@@ -1,6 +1,5 @@
 import Element
 
-
 def box(width, height):
     buffer = []
     buffer.append("." + "-"*(width-2) + ".")
@@ -15,3 +14,7 @@ class Box(Element):
         super(Box).__init__(x, y)
         self.width = width
         self.height = height
+
+    def get_obj(self):
+        # 
+        pass
